@@ -1,3 +1,4 @@
+Sub Table2Worksheets()
     Const COL = "XFD"
     
     mainSheet = ActiveSheet.Name
@@ -23,3 +24,4 @@
         Sheets(mainSheet).Select
         i = i + 1
     Wend
+End Sub
