@@ -33,7 +33,9 @@ Sub ListFilesInSecondDepth()
             For Each fileObj In subSubFolderObj.Files
                 ' Print the name of the file
                 ' Debug.Print subSubFolderObj.Path & "\" & fileObj.Name
-                InsertImageIntoDocument (subSubFolderObj.Path & "\" & fileObj.Name)
+                 If Right(fileObj.Name, 3) = "png" Then
+                    InsertImageIntoDocument (subSubFolderObj.Path & "\" & fileObj.Name)
+                End If
             Next fileObj
         Next subSubFolderObj
     Next subFolderObj
